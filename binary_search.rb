@@ -29,13 +29,12 @@
 def first_bad_version(n)
   bad = n
   good = 0
-  
+
   low = 1 
   high = n
 
   until bad - good == 1 do
-    mid = (low + high) / 2       # 1
-    puts mid
+    mid = (low + high) / 2
     v_bad = is_bad_version(mid)
     case v_bad 
 
@@ -49,7 +48,6 @@ def first_bad_version(n)
         low = mid
     end
   end 
-  puts bad
   return bad
 end
 
